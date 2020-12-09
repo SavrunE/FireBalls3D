@@ -28,7 +28,9 @@ public class Tower : MonoBehaviour
 
         foreach (var block in blocks)
         {
-            block.transform.position = new Vector3(block.transform.position.x, block.transform.position.y - block.transform.localScale.y, block.transform.position.z);
+            block.transform.position = new Vector3(block.transform.position.x,
+                block.transform.position.y - block.transform.localScale.y,
+                block.transform.position.z);
         }
     }
 }
