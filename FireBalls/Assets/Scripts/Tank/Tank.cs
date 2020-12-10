@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Tank : MonoBehaviour
 {
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Projectile projectile;
     [SerializeField] private float delayBetweenShoot;
+    [SerializeField] private float recoilDistance;
+    [SerializeField] private float rotateAngle = -20f;
 
     private float timeAfterShoot;
 
@@ -19,7 +22,10 @@ public class Tank : MonoBehaviour
             if (timeAfterShoot > delayBetweenShoot)
             {
                 Shoot();
+                transform.DOMoveZ(transform.position.z - recoilDistance, delayBetweenShoot / 2).SetLoops(2, LoopType.Yoyo);
+                transform.DORotate(new Vector3(rotateAngle, 0, 0), delayBetweenShoot / 2, RotateMode.Fast).SetLoops(2, LoopType.Yoyo);
                 timeAfterShoot = 0;
+
             }
         }
     }
