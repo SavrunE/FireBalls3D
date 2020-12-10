@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(TowerBuilder))]
 public class Tower : MonoBehaviour
@@ -8,6 +9,8 @@ public class Tower : MonoBehaviour
     private TowerBuilder towerBuilder;
 
     private List<Block> blocks;
+
+    public event UnityAction<int> SizeChanged;
 
     private void Start()
     {
@@ -18,6 +21,7 @@ public class Tower : MonoBehaviour
         {
             block.BulletHit += OnBulletHit;
         }
+        SizeChanged?.Invoke(blocks.Count);
     }
 
     private void OnBulletHit(Block hittedBlock)
@@ -32,5 +36,6 @@ public class Tower : MonoBehaviour
                 block.transform.position.y - block.transform.localScale.y,
                 block.transform.position.z);
         }
+        SizeChanged?.Invoke(blocks.Count);
     }
 }
