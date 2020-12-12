@@ -42,7 +42,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -1040,7 +1040,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.47297668
+          value: 0.55405426
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1049,7 +1049,7 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 0.62162083
+          value: 0.7567565
           inSlope: -0.45173237
           outSlope: -0.45173237
           tangentMode: 0
@@ -1380,7 +1380,7 @@ ParticleSystem:
         atime0: 0
         atime1: 65535
         atime2: 65535
-        atime3: 65535
+        atime3: 64957
         atime4: 0
         atime5: 0
         atime6: 0
