@@ -18,5 +18,9 @@ public class TowerSize : MonoBehaviour
     private void OnSizeChanged(int size)
     {
         this.sizeText.text = size.ToString();
+        if (size <= 0)
+        {
+            print("End");
+        }
     }
 }
