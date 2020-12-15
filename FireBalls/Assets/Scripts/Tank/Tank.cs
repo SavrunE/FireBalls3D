@@ -6,7 +6,7 @@ using DG.Tweening;
 public class Tank : MonoBehaviour
 {
     [SerializeField] private Transform shootPoint;
-    [SerializeField] private Projectile projectile;
+    [SerializeField] private Projectile[] projectiles;
     [SerializeField] private float delayBetweenShoot;
     [SerializeField] private float recoilDistance;
     [SerializeField] private float rotateAngle = -20f;
@@ -31,6 +31,6 @@ public class Tank : MonoBehaviour
     }
     private void Shoot()
     {
-        Instantiate(projectile, shootPoint.position, Quaternion.identity);
+        Instantiate(projectiles[Random.Range(0, projectiles.Length)], shootPoint.position, Quaternion.identity);
     }
 }
