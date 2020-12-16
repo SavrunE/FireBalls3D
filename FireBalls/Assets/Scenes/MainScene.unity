@@ -789,7 +789,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 414307135}
-  projectile: {fileID: 3165253336457761562, guid: 82434f17c7091c8468850edd9f41d1ad, type: 3}
+  projectiles:
+  - {fileID: 3165253336457761562, guid: 82434f17c7091c8468850edd9f41d1ad, type: 3}
+  - {fileID: 3165253336457761562, guid: 6666f3fd51e63f04b978cb0a40b49ea1, type: 3}
+  - {fileID: 3165253336457761562, guid: be368d954a8a5cd49940e37f11ea6815, type: 3}
   delayBetweenShoot: 0.2
   recoilDistance: 0
   rotateAngle: -20
@@ -931,11 +934,15 @@ MonoBehaviour:
   buildPoint: {fileID: 1536769214}
   block: {fileID: 4036112664781918620, guid: 5b3099c1f5ac6ef4cbbdae7aca67d82d, type: 3}
   colors:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 0.10256318, g: 0.8113208, b: 0.1446266, a: 0}
-  - {r: 0.94360876, g: 0, b: 1, a: 0}
-  - {r: 1, g: 0.94436383, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.057291746, a: 1}
+  - {r: 0.94416237, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0.9453552, b: 0, a: 1}
+  - {r: 0, g: 0.15437102, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0.9008856, a: 1}
+  - {r: 1, g: 0.6761494, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.62896585, a: 1}
 --- !u!114 &1536769216
 MonoBehaviour:
   m_ObjectHideFlags: 0
