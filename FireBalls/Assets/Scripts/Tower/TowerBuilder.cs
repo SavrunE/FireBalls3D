@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class TowerBuilder : MonoBehaviour
 {
-    [SerializeField] private float towerSize;
+    public int TowerSize;
+
     [SerializeField] private Transform buildPoint;
     [SerializeField] private Block block;
     [SerializeField] private Color[] colors;
@@ -16,7 +17,7 @@ public class TowerBuilder : MonoBehaviour
 
         Transform currentPoint = buildPoint;
 
-        for (int i = 0; i < towerSize; i++)
+        for (int i = 0; i < TowerSize; i++)
         {
             Block newBlock = BuildBlock(currentPoint);
             newBlock.SetColor(colors[Random.Range(0, colors.Length)]);

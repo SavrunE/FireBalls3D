@@ -6,6 +6,10 @@ using UnityEngine.Events;
 [RequireComponent(typeof(TowerBuilder))]
 public class Tower : MonoBehaviour
 {
+    [Header("End game effects")]
+    [SerializeField] private ParticleSystem salute;
+    [SerializeField] private GameObject winTitle;
+    
     private TowerBuilder towerBuilder;
 
     private List<Block> blocks;
@@ -37,5 +41,15 @@ public class Tower : MonoBehaviour
                 block.transform.position.z);
         }
         SizeChanged?.Invoke(blocks.Count);
+        if (blocks.Count == 0)
+        {
+            OnWin();
+        }
+    }
+    private void OnWin()
+    {
+        Instantiate(salute, transform.position, Quaternion.Euler(-90,0,0));
+        salute.Play();
+        winTitle.SetActive(true);
     }
 }
