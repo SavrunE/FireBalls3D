@@ -228,8 +228,6 @@ GameObject:
   m_Component:
   - component: {fileID: 273058710}
   - component: {fileID: 273058709}
-  - component: {fileID: 273058712}
-  - component: {fileID: 273058711}
   m_Layer: 0
   m_Name: TypedProcessor
   m_TagString: Untagged
@@ -263,40 +261,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &273058711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273058708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74838b7895dc1dc489a53231c97dd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildPoint: {fileID: 0}
-  block: {fileID: 0}
-  colors: []
---- !u!114 &273058712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273058708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b005fc1033b3048ad6c7acb996949b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootPoint: {fileID: 0}
-  projectiles: []
-  delayBetweenShoot: 0
-  recoilDistance: 0
-  rotateAngle: -20
-  aditionalProjectile: 0
-  towerBuilder: {fileID: 0}
 --- !u!1 &374670664
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,8 +601,6 @@ GameObject:
   m_Component:
   - component: {fileID: 487985845}
   - component: {fileID: 487985844}
-  - component: {fileID: 487985847}
-  - component: {fileID: 487985846}
   m_Layer: 0
   m_Name: SceneLoader
   m_TagString: Untagged
@@ -674,40 +636,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &487985846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487985843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74838b7895dc1dc489a53231c97dd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildPoint: {fileID: 0}
-  block: {fileID: 0}
-  colors: []
---- !u!114 &487985847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487985843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b005fc1033b3048ad6c7acb996949b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootPoint: {fileID: 0}
-  projectiles: []
-  delayBetweenShoot: 0
-  recoilDistance: 0
-  rotateAngle: -20
-  aditionalProjectile: 0
-  towerBuilder: {fileID: 0}
 --- !u!4 &563426651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8612747740867267239, guid: 831bfc4b3c2b69f44b789b9555b158f4, type: 3}

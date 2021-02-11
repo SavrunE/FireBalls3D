@@ -5,4 +5,3 @@ namespace IJunior.TypedScenes
         void OnSceneLoaded(T argument);
     }
 }
-s

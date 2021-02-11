@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelConfiguration : ScriptableObject
 {
     [SerializeField] private int towerSize;
-    public int TowerSize => TowerSize;
+    public int TowerSize => towerSize;
 
     [SerializeField] private int tankAditionalProjectiles;
     public int TankAditionalProjectiles => tankAditionalProjectiles;
