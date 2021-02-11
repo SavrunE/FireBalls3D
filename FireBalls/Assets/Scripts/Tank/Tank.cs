@@ -4,8 +4,9 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using IJunior.TypedScenes;
 
-public class Tank : MonoBehaviour
+public class Tank : MonoBehaviour, ISceneLoadHandler<LevelConfiguration>
 {
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Projectile[] projectiles;
@@ -65,5 +66,10 @@ public class Tank : MonoBehaviour
     private void Shoot()
     {
         Instantiate(projectiles[Random.Range(0, projectiles.Length)], shootPoint.position, Quaternion.identity);
+    }
+
+    public void OnSceneLoaded(LevelConfiguration argument)
+    {
+        aditionalProjectile = argument.TankAditionalProjectiles;
     }
 }
