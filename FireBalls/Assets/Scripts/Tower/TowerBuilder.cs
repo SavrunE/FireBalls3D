@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using IJunior.TypedScenes;
 
-public class TowerBuilder : MonoBehaviour
+public class TowerBuilder : MonoBehaviour, ISceneLoadHandler<LevelConfiguration>
 {
-    public int TowerSize;
+    public int TowerSize { get; private set; }
 
     [SerializeField] private Transform buildPoint;
     [SerializeField] private Block block;
@@ -27,6 +28,11 @@ public class TowerBuilder : MonoBehaviour
         return blocks;
     }
 
+    public void OnSceneLoaded(LevelConfiguration argument)
+    {
+        TowerSize = argument.TowerSize;
+    }
+
     private Block BuildBlock(Transform currentBuildPoint)
     {
         return Instantiate(block, GetBuildPoint(currentBuildPoint), Quaternion.identity, buildPoint);
@@ -34,7 +40,7 @@ public class TowerBuilder : MonoBehaviour
 
     private Vector3 GetBuildPoint(Transform currentSegment)
     {
-        return new Vector3(buildPoint.position.x, 
+        return new Vector3(buildPoint.position.x,
             currentSegment.position.y + currentSegment.localScale.y / 2 + block.transform.localScale.y / 2,
             buildPoint.position.z);
     }
